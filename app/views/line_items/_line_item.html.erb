@@ -1,4 +1,9 @@
 <% @cart.line_items.each do |item| %>
+<% if item == @current_item %>
+<tr id="current_item">
+<% else %>
+<tr>
+<% end %>
 <tr>
 <td><%= item.quantity %>&times;</td>
 <td><%= item.product.title %></td>
